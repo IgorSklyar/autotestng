@@ -20,7 +20,7 @@ class SearchSteps {
 
     static void clickSubmitSearching() {
         FindButtonElements.submitButton.click()
-        WaitHelper.waitStataResult()
+        WaitHelper.waitStatsResult()
     }
 
     static void getUrlsResultsList() {

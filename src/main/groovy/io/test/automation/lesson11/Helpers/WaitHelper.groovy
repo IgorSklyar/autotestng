@@ -5,7 +5,7 @@ import com.codeborne.selenide.Condition
 
 class WaitHelper {
 
-    static void waitStataResult() {
+    static void waitStatsResult() {
         ResultStatsListElements.resultsStat.shouldBe(Condition.enabled)
     }
 }
