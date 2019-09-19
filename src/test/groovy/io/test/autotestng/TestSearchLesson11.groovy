@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.page
 @Slf4j
 class TestSearchLesson11 {
 
-    @BeforeMethod
+    @BeforeMethod(groups = ["TEST_A"])
     void setUp(){
         YandexPage.open()
 //        ThreadPool.wait(50)
@@ -21,7 +21,7 @@ class TestSearchLesson11 {
     }
 
 
-    @AfterMethod
+    @AfterMethod(groups = ["TEST_A"])
      void closeDown() {
         YandexPage.exit()
         log.info("End of test")
@@ -31,34 +31,36 @@ class TestSearchLesson11 {
     }
 
 
-    @Test
+    @Test(groups = ["TEST_A"])
 void searchingTest (){
         SearchSteps searchSteps = page(SearchSteps.class)
-        searchSteps.setSearchRequest("testng")
+        searchSteps.setSearchRequest("Gradle")
         SearchSteps.clickSubmitSearching()
         SearchSteps.getUrlsResultsList()
 
-//System.out.println("Test")
-
-//    }
-//    @Test
-//    void searchingTest2 (){
-//        SearchSteps searchSteps = page(SearchSteps.class)
-//        searchSteps.setSearchRequest("Groovy")
-
-////System.out.println("Test")
-//
-//    }
 
 
-//    @Test
-//    void searchingTest3 (){
-//        SearchSteps searchSteps = page(SearchSteps.class)
-//        searchSteps.setSearchRequest("TestNG")
 
-//System.out.println("Test")
+   }
+    @Test(groups = ["TEST_A"])
+    void searchingTest2 (){
+        SearchSteps searchSteps = page(SearchSteps.class)
+        searchSteps.setSearchRequest("Groovy")
+        SearchSteps.clickSubmitSearching()
+        SearchSteps.getUrlsResultsList()
+
 
     }
 
+
+    @Test(groups = ["TEST_A"])
+    void searchingTest3 (){
+        SearchSteps searchSteps = page(SearchSteps.class)
+        searchSteps.setSearchRequest("TestNG")
+        SearchSteps.clickSubmitSearching()
+        SearchSteps.getUrlsResultsList()
+
+
+    }
 
 }

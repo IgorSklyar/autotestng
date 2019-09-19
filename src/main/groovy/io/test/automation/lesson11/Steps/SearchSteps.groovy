@@ -7,9 +7,12 @@ import io.test.automation.lesson11.Elements.FindButtonElements
 import io.test.automation.lesson11.Elements.InputDataElements
 import io.test.automation.lesson11.Helpers.WaitHelper
 import io.test.automation.lesson11.Pages.ResultPage
+import org.openqa.selenium.By
 import org.openqa.selenium.support.FindBy
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.support.ui.Wait
+
+import static com.codeborne.selenide.Selenide.$$
 
 
 @Slf4j
@@ -27,23 +30,21 @@ class SearchSteps {
     }
     static void clickSubmitSearching() {
         FindButtonElements.submitButton.click()
-        //sleep(60000)
         WaitHelper.waitStataResult()
-        WaitHelper.waitJQueryReady()
+      //  WaitHelper.waitJQueryReady()
     }
+
 
     static void getUrlsResultsList(){
 
         List<SelenideElement> searchResultList = ResultPage.results
-       log.info("Display href: " + searchResultList)
-
-
+       //log.info("Display href: " + searchResultList)
 
         for (SelenideElement webElement : searchResultList)
 
         {
-            System.out.println(webElement.getAttribute("href"))
-           // log.info(webElement.getAttribute('href') )
+            //System.out.println(webElement.getAttribute("href"))
+            log.info(webElement.getAttribute('href') )
         }
     }
 
