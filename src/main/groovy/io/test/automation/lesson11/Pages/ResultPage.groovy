@@ -5,11 +5,9 @@ import static com.codeborne.selenide.Selenide.$$
 
 class ResultPage {
 
-
-        static  getResults(){
-
-            $$(By.cssSelector('[data-cid] .organic__title-wrapper [href]'))
-        }
+    static getResults() {
+        $$(By.cssSelector('[data-cid] .organic__title-wrapper [href]'))
     }
+}
 
 

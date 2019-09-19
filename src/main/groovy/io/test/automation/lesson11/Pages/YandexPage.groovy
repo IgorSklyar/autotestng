@@ -5,12 +5,11 @@ import com.codeborne.selenide.WebDriverRunner
 
 class YandexPage {
 
-    static   open() {
+    static open() {
         Selenide.open("https://ya.ru/")
     }
 
     static exit() {
-
         WebDriverRunner.closeWebDriver()
-}
+    }
 }

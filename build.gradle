@@ -45,7 +45,7 @@ dependencies {
     compile group: 'org.slf4j', name: 'jul-to-slf4j', version: '1.7.25'
 
     // https://mvnrepository.com/artifact/org.testng/testng
-    testCompile group: 'org.testng', name: 'testng', version: '7.0.0-beta3'
+    testCompile group: 'org.testng', name: 'testng', version: '7.0.0'
 
     // https://mvnrepository.com/artifact/io.qameta.allure/allure-testng
     compile group: 'io.qameta.allure', name: 'allure-testng', version: '2.7.0'

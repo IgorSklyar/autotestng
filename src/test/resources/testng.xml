@@ -1,15 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name='Regress' parallel="tests" thread-count="3">
-    <test name='TEST_A'>
-        <groups>
-            <run>
-                <include name="TEST_A"/>
-            </run>
-        </groups>
-        <packages>
-            <package name="io.test.autotestng"/>
-        </packages>
+<suite name='Searching test' parallel="methods" thread-count="3">
+    <test name='SMOKE'>
+        <classes>
+            <class name="io.test.autotestng.TestSearchLesson11" />
+        </classes>
     </test>
-
 </suite>

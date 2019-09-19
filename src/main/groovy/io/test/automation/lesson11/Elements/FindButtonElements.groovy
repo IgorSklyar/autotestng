@@ -5,7 +5,7 @@ import static com.codeborne.selenide.Selenide.$
 
 class FindButtonElements {
 
-    static getSubmitButton(){
+    static getSubmitButton() {
         $(By.xpath("//div[@class='search2__button']"))
     }
 }
